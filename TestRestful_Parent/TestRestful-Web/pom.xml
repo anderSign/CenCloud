@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>TestRestful_Parent</artifactId>
+        <groupId>org.testRestful</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>TestRestful-Web</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <!--引入必要依赖-->
+        <!--commons的依赖-->
+        <dependency>
+            <groupId>org.testRestful</groupId>
+            <artifactId>TestRestful-Commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--model的依赖  注意在此项目中因为model项目就已经包含了必要的依赖，因此如果已经继承了该模块就可以不用重新导入!-->
+        <dependency>
+            <groupId>org.testRestful</groupId>
+            <artifactId>TestRestful-Model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!---因为其他部分的依赖-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+        </dependency>
+        <!--注意测试的模块在上面的子项目中给是没有的，因此必须重新导入!-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

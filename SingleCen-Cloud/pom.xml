@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.scCloud</groupId>
+    <artifactId>SingleCen-Cloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>1SingleCen-Eureka-Server</module>
+        <module>2SingleCen-Eureka-Model1</module>
+        <module>3SingleCen-Consul-Client</module>
+        <module>4SingleAlienyas-Consul-User</module>
+        <module>5SingleAlienyas-Consul-Orders</module>
+        <module>7SlingleAlienyas-OpenFeign-Product</module>
+        <module>6SlingleAlienyas-OpenFeign-Category</module>
+        <module>8SingleCen-Hystrix-Server</module>
+        <module>9SingleCen-Hystrix-Client</module>
+        <module>10SingleCen-GateWay-Server</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!--1.自定义标签属性-->
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring.cloud-version>2020.0.2</spring.cloud-version>
+    </properties>
+
+    <!--导入夫项目-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个测试的界面</title>
+    <style type="text/css">
+        #container{
+            margin-top: 10%;
+            margin-left: 30%;
+            align-content: center;
+            text-align: center;
+            height: 500px;
+            width: 500px;
+            border-radius: 25px;
+            border: aqua 2px double;
+            background-color: aliceblue;
+            font-family: 华文琥珀;
+        }
+        #container:hover{
+            margin-top: 10%;
+            margin-left: 30%;
+            align-content: center;
+            text-align: center;
+            height: 500px;
+            width: 500px;
+            border-radius: 25px;
+            border: #cbf6f6 2px double;
+            background-color: #fafcf0;
+            font-family: 微软雅黑;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="row">
+        <span>
+            <a href="tUser">查询所有</a>
+        </span>
+        <span>
+            <a href="tUser/1">查询1号</a>
+        </span>
+        <span>
+            <button id="postButton" value="post请求">post请求添加一个</button>
+        </span>
+        <span>
+            <button id="patchButton" value="patch请求">patch请求修改10号</button>
+        </span>
+        <span>
+            <button id="delButton" value="del请求">del请求删除10号</button>
+        </span>
+    </div>
+    <div class="row">
+        <input type="file" id="resource" name="resource" value=""/>
+        <input type="button" id="uploadFile" value="点我上传文件">
+    </div>
+    <div class="row">
+        <!--文件提交时必须指定enctype的类型-->
+        <form method="post" style="font-family: 'Agency FB'" enctype="multipart/form-data" action="tUser/file">
+            <input type="file" id="resource1" name="resource" value=""/>
+            <!--只读的字段-->
+            <input type="text" id="text" name="name" value="张三" readonly/>
+            <input type="submit" id="uploadFile1" value="点我正确上传文件">
+        </form>
+    </div>
+</div>
+<script type="application/javascript" src="webjars/jquery/3.5.1/jquery.js" ></script>
+<script>
+    //增加
+    $("#postButton").click(
+        //被点击时直接触发事件
+        function (){
+            $.ajax({
+                type:"post",
+                url:"tUser",
+                data:{"name":"摇摆杨","age": 21},
+                success:function (data){
+                    alert(data.toString());
+                    console.info(data);
+                },
+                dataType: "json",
+                error:{}
+            })
+        }
+    )
+    //删除
+    $("#patchButton").click(
+        //被点击时直接触发事件
+        function (){
+            var tUser={"id": 10,"name":"摇摆杨","age": 800};
+            $.ajax({
+                type:"patch",
+                url:"tUser",
+                data: tUser,
+                success:function (data){
+                    alert(data.toString());
+                    console.info(data);
+                },
+                dataType: "json",
+                error:{}
+            })
+        }
+    )
+    //修改
+    $("#delButton").click(
+        //被点击时直接触发事件
+        function (){
+            $.ajax({
+                type:"delete",
+                url:"tUser/10",
+                data:{},
+                success:function (data){
+                    alert(data);
+                    console.info(data);
+                },
+                dataType: "text",
+                error:{}
+            })
+        }
+    )
+
+
+
+
+
+    //极度复杂的文件上传(可以通过新建表单对象进行上传，但是这样需要对原有的数据进行很多处理，而且作用扩展性差)
+    /**
+     * 因为submit上传是最为安全的因此这里是没有问题的
+     * 上传文件的方式一般是表单形式的上传。最好不用尝试别的方法,如下是一个有问题的文件上传
+     * 后端只收到了文件路径
+     */
+    $("#uploadFile").click(
+        //被点击时直接触发事件
+        function (){
+            //获取上传的文件
+            var data=document.getElementById("resource").value;
+            var str=data.toString().split("\\");
+            console.info("打印切割后的字符串"+str);
+            var path=str[str.length-1];
+            if (path!==""){
+            console.info("正在获取信息:"+data);
+            $.ajax({
+                type:"post",
+                url:"tUser/file",
+                data: {
+                    "name":"张三",
+                    "dataSource": data,
+                },
+                success:function (data){
+                    alert(data);
+                    console.info(data);
+                },
+                dataType: "text",
+                error:{}
+            })
+            }else {
+               alert("不行,必须提交文件!!!");
+            }
+        }
+    )
+</script>
+</body>
+</html>

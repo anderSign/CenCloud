@@ -1,0 +1,25 @@
+#eureka默认的端口号是8761因此最好是8761  并且最好不要指定server.servlet.context-path否则就会找不到自己的服务兼客户端。
+server:
+  port: 9610
+#注意:eureka的默认的监控的url是：http://localhost:8761/eureka   但是可以自行修改成相同端口号下的任意端口
+#如果端口号不同就会报出:Cannot execute request on any known server
+eureka:
+  client:
+    fetch-registry: false #关闭立即注册
+    service-url:
+      defaultZone: "http://localhost:9610/eureka,http://localhost:9611/eureka" #搭建集群的时才会设置多个url，每次打开服务都需要修改
+    register-with-eureka: false #关闭eureka把自己当作服务端像服务端注册
+  instance:
+    lease-expiration-duration-in-seconds: 10 #设置接受心跳的最大时间(单位:秒)
+    lease-renewal-interval-in-seconds: 8 #设置发生心跳的间隔(单位:秒)
+#  server:
+#    enable-self-preservation: false #关闭自我保护机制
+#    eviction-interval-timer-in-ms: 3000 #超过${time/1000}秒自动清除
+#不添加就是unknown作为服务名,需要注意的是在新版本的eureka中是允许出现下划线的，但这在以前是不被允许的，此外此命名规则是忽略大小写的大写
+spring:
+  application:
+    name: "Single_Cen_EurekaServer"
+#关于eureka的报错原因：
+#1.一般报错所导致的原因主要分为少了注解，版本不一致或是配置文件写错这三大类
+#2.启动eureka时开始会因为bean对象的相互依赖问题导致bean注入失败抛出异常，不过这并不会影响结果。因此大可不管,当然你也可以之间将eureka.client.fetch-registry设置成false
+

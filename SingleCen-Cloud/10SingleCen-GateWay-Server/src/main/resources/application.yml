@@ -1,0 +1,48 @@
+#设置consul客户端的启动端口号
+server:
+  port: 9700
+#不添加就是unknown作为服务名,需要注意的是在新版本的eureka中是允许出现下划线的，但这在以前是不被允许的，此外此命名规则是忽略大小写的大写
+spring:
+  application:
+    name: "SingleCenGetWayApplication"
+  cloud:
+    consul:
+      host: "localhost"
+      port: 8500
+      discovery:
+        service-name: "SingleCenGetWayApplication" #向consul进行注册的服务名
+        register-health-check: true #健康检查默认为true，不推荐生产环境添加
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启注册中心动态创建路由功能
+      routes:
+        - id: category-router
+          uri: lb://CategoryApplication #只到端口号即可千万别写后面的  常规写法:"http://localhost:9606"(无负载均衡)，特殊写法:"lb//[服务名]有负载均衡"
+          predicates:
+            - Path= /CategoryByProc/**,/Category/** #断言  路径断言  注意这里没有双引号，且模糊绑定是一定在后面加的是双*号。
+#            - After= 2021-05-14T15:35:54.599+08:00[Asia/Shanghai] #  表示在这个时间段之后可以访问   测试结果成功
+#            - Before= 2021-05-14T15:35:54.599+08:00[Asia/Shanghai] #  表示在这个时间段之前可以访问   测试结果成功
+            - Between= 2021-05-14T15:35:54.599+08:00[Asia/Shanghai],2030-05-14T15:35:54.599+08:00[Asia/Shanghai] #  表示在这个时间段之间可以访问   测试结果成功
+#            - Cookie=键1, 值1  #包含指定cookie的查找
+#            - Cookie=键2, {正在匹配也行:'[a-zA-Z0-9]+'}
+#            - Header= X-Request-Id, \d+ #包含指定请求头的查找
+          filters:
+            - AddRequestHeader= X-Request-Id, 100 #和之前一样键值对可以多次添加
+            - AddRequestParameter= red, blue #添加参数
+            - AddResponseHeader= X-Response-Host, ${spring.application.name} #可以直接把键给写进去 注意:这个结果需要在浏览器中查看
+#            - PrefixPath=/CategoryByProc #加入指定的前缀信息  重要  注意这种前缀信息是在后端进行添加的而不是在前端做这样的处理的。
+            - StripPrefix=0 #去除前缀 把之前添加的前缀去掉一级  当前并没有用到
+        - id: product-router
+          uri: lb://ProductApplication
+          predicates:
+            - Path= /ProductProc/**,/ProductByAbstract/**
+#        - id: product-router
+#          uri: http://localhost:9607
+#          predicates:
+#            - Path= /ProductProc
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #开启保留的端点,必须加双引号

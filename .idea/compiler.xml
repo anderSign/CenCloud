@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="6SlingleAlienyas-OpenFeign-Category" />
+        <module name="TestRestful-Model" />
+        <module name="9SingleCen-Hystrix-Client" />
+        <module name="3SingleCen-Consul-Client" />
+        <module name="7SlingleAlienyas-OpenFeign-Product" />
+        <module name="8SingleCen-Hystrix-Server" />
+        <module name="2SingleCen-Eureka-Model1" />
+        <module name="5SingleAlienyas-Consul-Orders" />
+        <module name="10SingleCen-GateWay-Server" />
+        <module name="TestRestful-Commons" />
+        <module name="1SingleCen-Eureka-Server" />
+        <module name="TestRestful" />
+        <module name="TestRestful-Web" />
+        <module name="4SingleAlienyas-Consul-User" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="10SingleCen-GateWay-Server" target="8" />
+      <module name="1SingleCen-Eureka-Server" target="8" />
+      <module name="2SingleCen-Eureka-Model1" target="8" />
+      <module name="3SingleCen-Consul-Client" target="8" />
+      <module name="4SingleAlienyas-Consul-User" target="8" />
+      <module name="5SingleAlienyas-Consul-Orders" target="8" />
+      <module name="6SlingleAlienyas-OpenFeign-Category" target="8" />
+      <module name="7SlingleAlienyas-OpenFeign-Product" target="8" />
+      <module name="8SingleCen-Hystrix-Server" target="8" />
+      <module name="9SingleCen-Hystrix-Client" target="8" />
+      <module name="SingleCen-Cloud" target="8" />
+      <module name="TestRestful" target="1.8" />
+      <module name="TestRestful-Commons" target="8" />
+      <module name="TestRestful-Model" target="8" />
+      <module name="TestRestful-Web" target="8" />
+      <module name="TestRestful_Parent" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="10SingleCen-GateWay-Server" options="-parameters" />
+      <module name="1SingleCen-Eureka-Server" options="-parameters" />
+      <module name="2SingleCen-Eureka-Model1" options="-parameters" />
+      <module name="3SingleCen-Consul-Client" options="-parameters" />
+      <module name="5SingleAlienyas-Consul-Orders" options="-parameters" />
+      <module name="6SlingleAlienyas-OpenFeign-Category" options="-parameters" />
+      <module name="7SlingleAlienyas-OpenFeign-Product" options="-parameters" />
+      <module name="8SingleCen-Hystrix-Server" options="-parameters" />
+      <module name="9SingleCen-Hystrix-Client" options="-parameters" />
+      <module name="TestRestful" options="-parameters" />
+      <module name="TestRestful-Commons" options="-parameters" />
+      <module name="TestRestful-Model" options="-parameters" />
+      <module name="TestRestful-Web" options="-parameters" />
+    </option>
+  </component>
+</project>

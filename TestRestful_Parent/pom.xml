@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.testRestful</groupId>
+    <artifactId>TestRestful_Parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>TestRestful-Commons</module>
+        <module>TestRestful-Model</module>
+        <module>TestRestful-Web</module>
+    </modules>
+    <!--注意当继承了某一夫项目时尽量就别把该父项目中的依赖对象添加到<dependencyManagement>标签中去-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!--自定义属性-->
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <mysql.connector.version>8.0.21</mysql.connector.version>
+        <mybatis.stater.version>2.1.4</mybatis.stater.version>
+        <druid.stater.version>1.2.6</druid.stater.version>
+        <jquery.compiler.version>3.5.1</jquery.compiler.version>
+    </properties>
+
+
+    <!--这是一个maven聚合开发的项目,因此在此父项目中只会做维护版本号的操作-->
+    <!--dependencyManagement标签的作用就是为了管理依赖，且不会导入依赖-->
+    <!--一般存放的时非父项目中的内容-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.stater.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.stater.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery</artifactId>
+                <version>${jquery.compiler.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

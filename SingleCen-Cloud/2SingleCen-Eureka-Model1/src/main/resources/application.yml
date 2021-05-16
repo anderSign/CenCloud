@@ -1,0 +1,13 @@
+#eureka默认的端口号是8761因此最好是8761  并且最好不要指定server.servlet.context-path否则就会找不到自己的服务兼客户端。
+server:
+  port: 9601
+#不添加就是unknown作为服务名,需要注意的是在新版本的eureka中是允许出现下划线的，但这在以前是不被允许的，此外此命名规则是忽略大小写的大写
+spring:
+  application:
+    name: "Single_Cen_Eureka_Model1"
+#客户端必须指定目标url否则如果在服务端端口号被改变的情况下将无法正常注册服务。
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:9610/eureka,http://localhost:9611/eureka,http://localhost:9612/eureka"
+#注意eureka里面的所有东西都是

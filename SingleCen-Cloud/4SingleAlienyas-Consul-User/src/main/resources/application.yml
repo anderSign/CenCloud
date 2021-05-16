@@ -1,0 +1,20 @@
+#设置consul客户端的启动端口号
+server:
+  port: 9603
+#不添加就是unknown作为服务名,需要注意的是在新版本的eureka中是允许出现下划线的，但这在以前是不被允许的，此外此命名规则是忽略大小写的大写
+spring:
+  application:
+    name: "UserApplication"
+  cloud:
+    consul:
+      host: "localhost"
+      port: 8500
+      discovery:
+        service-name: "${spring.application.name}" #向consul进行注册在单一应用下可以写成"${XXX.xxx.xxx}"
+        register-health-check: true #健康检查默认为true，不推荐生产环境添加
+#    loadbalancer:
+#      zone: ""
+#H版本及以前springcloud是支持奈菲的负载均衡，在2020.0.x版本以后spring就自行封装了一个和奈菲关系不大的负载均衡(因此下面代码已经在2020.0.x版本以后不再使用)
+#OrdersApplication:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: "com.netflix.loadbalancer.RandomRule"
