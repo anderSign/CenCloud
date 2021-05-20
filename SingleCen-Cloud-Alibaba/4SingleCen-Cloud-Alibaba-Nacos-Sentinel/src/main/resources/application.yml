@@ -1,0 +1,20 @@
+#设置nacos客户端的启动端口号
+server:
+  port: 15000
+#服务名称
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost #nacos注册服务地址是来自于${spring.cloud.nacos.server-addr}中的信息
+        username: nacos
+        password: nacos
+        service: ${spring.application.name}
+      server-addr: 127.0.0.1:8848 #nacos总的地址信息(默认就是这里写的样子)
+    sentinel:
+      enabled: true #启动sentinel保护
+      transport:
+        dashboard: localhost:9091
+        port: 8719 #sentinel中默认的是8719，如需修改，则需要修改所有
+  application:
+    name: "Sentinel"

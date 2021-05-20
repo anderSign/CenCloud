@@ -45,4 +45,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*" #开启保留的端点,必须加双引号
+        include: "*" #开启暴露的端点,用于通过url查看json格式的服务端信息。注意:必须加双引号

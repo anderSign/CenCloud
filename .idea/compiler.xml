@@ -8,32 +8,48 @@
         <outputRelativeToContentRoot value="true" />
         <module name="6SlingleAlienyas-OpenFeign-Category" />
         <module name="TestRestful-Model" />
-        <module name="9SingleCen-Hystrix-Client" />
+        <module name="0SingleCen-Cloud-Alibaba-Nacos-Client" />
         <module name="3SingleCen-Consul-Client" />
+        <module name="9SingleCen-Hystrix-Client" />
         <module name="7SlingleAlienyas-OpenFeign-Product" />
         <module name="8SingleCen-Hystrix-Server" />
+        <module name="1SingleCen-Cloud-Alibaba-Nacos-TestProject" />
+        <module name="4SingleCen-Cloud-Alibaba-Nacos-Sentinel" />
+        <module name="2SingleCen-Cloud-Alibaba-Nacos-TestProject" />
         <module name="2SingleCen-Eureka-Model1" />
         <module name="5SingleAlienyas-Consul-Orders" />
-        <module name="10SingleCen-GateWay-Server" />
         <module name="TestRestful-Commons" />
+        <module name="10SingleCen-GateWay-Server" />
+        <module name="11SingleCen-Spring-Config-Server" />
+        <module name="3SingleCen-Cloud-Alibaba-Nacos-ConfigClient" />
         <module name="1SingleCen-Eureka-Server" />
         <module name="TestRestful" />
         <module name="TestRestful-Web" />
         <module name="4SingleAlienyas-Consul-User" />
+        <module name="12SingleCen-Spring-Config-Client" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
+      <module name="0SingleCen-Cloud-Alibaba-Nacos-Client" target="8" />
       <module name="10SingleCen-GateWay-Server" target="8" />
+      <module name="11SingleCen-Spring-Config-Server" target="8" />
+      <module name="12SingleCen-Spring-Config-Client" target="8" />
+      <module name="1SingleCen-Cloud-Alibaba-Nacos-TestProject" target="8" />
       <module name="1SingleCen-Eureka-Server" target="8" />
+      <module name="2SingleCen-Cloud-Alibaba-Nacos-TestProject" target="8" />
       <module name="2SingleCen-Eureka-Model1" target="8" />
+      <module name="3SingleCen-Cloud-Alibaba-Nacos-ConfigClient" target="8" />
       <module name="3SingleCen-Consul-Client" target="8" />
       <module name="4SingleAlienyas-Consul-User" target="8" />
+      <module name="4SingleCen-Cloud-Alibaba-Nacos-Sentinel" target="8" />
       <module name="5SingleAlienyas-Consul-Orders" target="8" />
+      <module name="5SingleCen-Cloud-Alibaba-Nacos-Service" target="8" />
       <module name="6SlingleAlienyas-OpenFeign-Category" target="8" />
       <module name="7SlingleAlienyas-OpenFeign-Product" target="8" />
       <module name="8SingleCen-Hystrix-Server" target="8" />
       <module name="9SingleCen-Hystrix-Client" target="8" />
       <module name="SingleCen-Cloud" target="8" />
+      <module name="SingleCen-Cloud-Alibaba" target="8" />
       <module name="TestRestful" target="1.8" />
       <module name="TestRestful-Commons" target="8" />
       <module name="TestRestful-Model" target="8" />
@@ -43,11 +59,18 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="0SingleCen-Cloud-Alibaba-Nacos-Client" options="-parameters" />
       <module name="10SingleCen-GateWay-Server" options="-parameters" />
+      <module name="11SingleCen-Spring-Config-Server" options="-parameters" />
+      <module name="1SingleCen-Cloud-Alibaba-Nacos-TestProject" options="-parameters" />
       <module name="1SingleCen-Eureka-Server" options="-parameters" />
+      <module name="2SingleCen-Cloud-Alibaba-Nacos-TestProject" options="-parameters" />
       <module name="2SingleCen-Eureka-Model1" options="-parameters" />
+      <module name="3SingleCen-Cloud-Alibaba-Nacos-ConfigClient" options="-parameters" />
       <module name="3SingleCen-Consul-Client" options="-parameters" />
+      <module name="4SingleCen-Cloud-Alibaba-Nacos-Sentinel" options="-parameters" />
       <module name="5SingleAlienyas-Consul-Orders" options="-parameters" />
+      <module name="5SingleCen-Cloud-Alibaba-Nacos-Service" options="-parameters" />
       <module name="6SlingleAlienyas-OpenFeign-Category" options="-parameters" />
       <module name="7SlingleAlienyas-OpenFeign-Product" options="-parameters" />
       <module name="8SingleCen-Hystrix-Server" options="-parameters" />

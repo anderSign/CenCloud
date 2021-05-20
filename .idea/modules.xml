@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/0SingleCen-Cloud-Alibaba-Nacos-Client/0SingleCen-Cloud-Alibaba-Nacos-Client.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/0SingleCen-Cloud-Alibaba-Nacos-Client/0SingleCen-Cloud-Alibaba-Nacos-Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/10SingleCen-GateWay-Server/10SingleCen-GateWay-Server.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/10SingleCen-GateWay-Server/10SingleCen-GateWay-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/11SingleCen-Spring-Config-Server/11SingleCen-Spring-Config-Server.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/11SingleCen-Spring-Config-Server/11SingleCen-Spring-Config-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/12SingleCen-Spring-Config-Client/12SingleCen-Spring-Config-Client.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/12SingleCen-Spring-Config-Client/12SingleCen-Spring-Config-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/1SingleCen-Cloud-Alibaba-Nacos-TestProject/1SingleCen-Cloud-Alibaba-Nacos-TestProject.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/1SingleCen-Cloud-Alibaba-Nacos-TestProject/1SingleCen-Cloud-Alibaba-Nacos-TestProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/1SingleCen-Eureka-Server/1SingleCen-Eureka-Server.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/1SingleCen-Eureka-Server/1SingleCen-Eureka-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/2SingleCen-Cloud-Alibaba-Nacos-TestProject/2SingleCen-Cloud-Alibaba-Nacos-TestProject.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/2SingleCen-Cloud-Alibaba-Nacos-TestProject/2SingleCen-Cloud-Alibaba-Nacos-TestProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/2SingleCen-Eureka-Model1/2SingleCen-Eureka-Model1.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/2SingleCen-Eureka-Model1/2SingleCen-Eureka-Model1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/3SingleCen-Cloud-Alibaba-Nacos-ConfigClient/3SingleCen-Cloud-Alibaba-Nacos-ConfigClient.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/3SingleCen-Cloud-Alibaba-Nacos-ConfigClient/3SingleCen-Cloud-Alibaba-Nacos-ConfigClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/3SingleCen-Consul-Client/3SingleCen-Consul-Client.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/3SingleCen-Consul-Client/3SingleCen-Consul-Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/4SingleAlienyas-Consul-User/4SingleAlienyas-Consul-User.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/4SingleAlienyas-Consul-User/4SingleAlienyas-Consul-User.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/4SingleCen-Cloud-Alibaba-Nacos-Sentinel/4SingleCen-Cloud-Alibaba-Nacos-Sentinel.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/4SingleCen-Cloud-Alibaba-Nacos-Sentinel/4SingleCen-Cloud-Alibaba-Nacos-Sentinel.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/5SingleAlienyas-Consul-Orders/5SingleAlienyas-Consul-Orders.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/5SingleAlienyas-Consul-Orders/5SingleAlienyas-Consul-Orders.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/6SlingleAlienyas-OpenFeign-Category/6SlingleAlienyas-OpenFeign-Category.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/6SlingleAlienyas-OpenFeign-Category/6SlingleAlienyas-OpenFeign-Category.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/7SlingleAlienyas-OpenFeign-Product/7SlingleAlienyas-OpenFeign-Product.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/7SlingleAlienyas-OpenFeign-Product/7SlingleAlienyas-OpenFeign-Product.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/8SingleCen-Hystrix-Server/8SingleCen-Hystrix-Server.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/8SingleCen-Hystrix-Server/8SingleCen-Hystrix-Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/9SingleCen-Hystrix-Client/9SingleCen-Hystrix-Client.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/9SingleCen-Hystrix-Client/9SingleCen-Hystrix-Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud/SingleCen-Cloud.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud/SingleCen-Cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/SingleCen-Cloud-Alibaba.iml" filepath="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/SingleCen-Cloud-Alibaba.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SingleCenCloud.iml" filepath="$PROJECT_DIR$/.idea/SingleCenCloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestRestful/TestRestful.iml" filepath="$PROJECT_DIR$/TestRestful/TestRestful.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestRestful_Parent/TestRestful-Commons/TestRestful-Commons.iml" filepath="$PROJECT_DIR$/TestRestful_Parent/TestRestful-Commons/TestRestful-Commons.iml" />

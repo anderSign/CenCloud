@@ -6,7 +6,13 @@
         <option value="$PROJECT_DIR$/TestRestful/pom.xml" />
         <option value="$PROJECT_DIR$/SingleCen-Cloud/pom.xml" />
         <option value="$PROJECT_DIR$/TestRestful_Parent/pom.xml" />
+        <option value="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/SingleCen-Cloud-Alibaba/5SingleCen-Cloud-Alibaba-Nacos-Service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK" />

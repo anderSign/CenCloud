@@ -1,0 +1,13 @@
+#Config Server地址，但是向服务注册中心注册是必须写的
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true #开启config Server自动发现
+        service-id: "SpringConfigServerApplication" #查找我们之前写好的服务id
+      label: master #选择的分支
+      name: 12Application #配置的文件名  注意这个地方一定不要搞一些骚操作，别新建文件夹放到其他路径中
+      profile: dev #你的环境  用了这个后  spring.profiles.active= "dev"将会失效
+    consul:
+      host: "localhost"
+      port: 8500

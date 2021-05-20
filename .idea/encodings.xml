@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/0SingleCen-Cloud-Alibaba-Nacos-Client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/1SingleCen-Cloud-Alibaba-Nacos-TestProject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/2SingleCen-Cloud-Alibaba-Nacos-TestProject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/3SingleCen-Cloud-Alibaba-Nacos-ConfigClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/4SingleCen-Cloud-Alibaba-Nacos-Sentinel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud-Alibaba/5SingleCen-Cloud-Alibaba-Nacos-Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SingleCen-Cloud/10SingleCen-GateWay-Server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud/11SingleCen-Spring-Config-Server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleCen-Cloud/12SingleCen-Spring-Config-Client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SingleCen-Cloud/1SingleCen-Eureka-Server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SingleCen-Cloud/2SingleCen-Eureka-Model1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SingleCen-Cloud/3SingleCen-Consul-Client/src/main/java" charset="UTF-8" />

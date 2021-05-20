@@ -23,10 +23,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--关闭热部署依赖，注意在集成服务端的时候最好不要添加热部署的依赖否则将会因为实时改变而造成不必要的麻烦-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-devtools</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-devtools</artifactId>-->
+        <!--        </dependency>-->
         <!--导入之前在学习SpringBootAdmin时用到的依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

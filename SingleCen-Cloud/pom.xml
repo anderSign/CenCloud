@@ -19,6 +19,8 @@
         <module>8SingleCen-Hystrix-Server</module>
         <module>9SingleCen-Hystrix-Client</module>
         <module>10SingleCen-GateWay-Server</module>
+        <module>11SingleCen-Spring-Config-Server</module>
+        <module>12SingleCen-Spring-Config-Client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

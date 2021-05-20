@@ -1,0 +1,13 @@
+#设置nacos客户端的自动配置信息
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost #nacos配置服务注册的地址
+        group: DEFAULT_GROUP #获取的分组
+#        name: configclient-dev #获取的文件名称它等同于${spring.cloud.nacos.config.prefix}+${spring.profiles.active}  不写就是默认这个
+        file-extension: yaml #获取的文件格式
+        prefix: configclient
+#        namespace: public #命名空间  默认public 可以自己在nacos客户端设置  直接的关系大概是:命名空间->组->dataid[配置文件dataid] 但是添加这个会一直打印日志比较烦
+  profiles:
+    active: dev #环境
